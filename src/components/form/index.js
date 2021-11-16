@@ -13,7 +13,12 @@ const Form = (props) => {
     return (
         <form>
             <label>Title</label>
-            <input type="text"></input>
+            <input 
+            type="text"
+            autoFocus
+            required
+            value={title}
+            onChange={(e) => setAuthor(e.target.value)}></input>
             <label>Author</label>
             <input type="text"></input>
             <label>ISBN#</label>
