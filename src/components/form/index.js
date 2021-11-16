@@ -1,6 +1,15 @@
 import React from "react";
 
-const Form = () => {
+const Form = (props) => {
+    const {
+        title,
+        setTitle,
+        author,
+        isbn,
+        setUsbn,
+        currentBookId
+    } = props;
+    
     return (
         <form>
             <label>Title</label>
