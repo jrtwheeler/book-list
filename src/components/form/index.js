@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = (props) => {
-  const { title, setTitle, author, isbn, setIsbn, currentBookId } = props;
+  const { title, setTitle, author, setAuthor, isbn, setIsbn, currentBookId } = props;
 
   return (
     <form>
