@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Form from "./components/form";
+import Table from "./components/table";
 import "./App.css";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           setIsbn={setIsbn}
           currentBookId={setCurrentBookId}
         />
+        <Table/>
       </div>
     </div>
   );
