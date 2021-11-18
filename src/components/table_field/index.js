@@ -1,16 +1,13 @@
 import React from "react";
 
-const Form = () => {
+const TableField = ({fieldName}) => {
     return(
-        <form>
-            <label>Title</label>
-            <input type="text"/>
-            <label>Author</label>
-            <input type="text"/>
-            <label>ISBN</label>
-            <input type="text"/>
-        </form>
+        <div className="tableField">
+            {fieldName}
+            <i class="fas fa-edit"></i>
+            <i class="fas fa-trash"></i>
+        </div>
     )
 }
 
-export default Form;
+export default TableField;
