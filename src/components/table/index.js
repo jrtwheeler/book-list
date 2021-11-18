@@ -16,7 +16,7 @@ const Table = (books) => {
                     <TableField fieldName={book.bookTitle}/>
                     <TableField fieldName={book.bookAuthor}/>
                     <TableField fieldName={book.book.Isbn}/>
-                    <TableField/>
+                    <TableField settingsField/>
                 </div>
             ))}
         </div>

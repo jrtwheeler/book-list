@@ -18,6 +18,10 @@ function App() {
     },
   ]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="App">
       <div className="container">
@@ -29,6 +33,7 @@ function App() {
           isbn={isbn}
           setIsbn={setIsbn}
           currentBookId={setCurrentBookId}
+          handleSubmit={handleSubmit}
         />
         <Table/>
       </div>
