@@ -34,8 +34,16 @@ function App() {
     ]);
   };
 
+  const clearInputs = () => {
+    setTitle("");
+    setAuthor("");
+    setIsbn("");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    clearInputs();
+    if(isInputInvalid()) return;
     addBook();
   };
 
