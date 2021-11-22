@@ -18,9 +18,26 @@ function App() {
     },
   ]);
 
+  const isInputInvalid = () => {
+    return (title.trim() === "" || author.trim() === "" || isbn.trim() === "");
+  };
+
+  const addBook = () => {
+    setBooks([
+      ...books,
+      {
+        bookTitle: title,
+        bookAuthor: author,
+        bookIsbn: isbn,
+        bookId: uuidv4(),
+      },
+    ]);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    addBook();
+  };
 
   return (
     <div className="App">
@@ -35,7 +52,7 @@ function App() {
           currentBookId={setCurrentBookId}
           handleSubmit={handleSubmit}
         />
-        <Table/>
+        <Table />
       </div>
     </div>
   );
