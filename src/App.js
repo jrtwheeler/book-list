@@ -39,7 +39,10 @@ function App() {
   }
 
   const editBook = () => {
-
+    setTitle(book.bookTitle);
+    setAuthor(book.bookAuthor);
+    setIsbn(book.bookIsbn);
+    setCurrentBookId(book.bookId);
   }
 
   const clearInputs = () => {
