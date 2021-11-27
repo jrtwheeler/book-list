@@ -34,8 +34,8 @@ function App() {
     ]);
   };
 
-  const removeBook = () => {
-
+  const removeBook = (id) => {
+    setBooks(books.filter((book) => book.bookId !== id))
   }
 
   const clearInputs = () => {
