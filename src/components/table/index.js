@@ -1,7 +1,7 @@
 import React from "react";
 import TableField from "../table_field";
 
-const Table = (books) => {
+const Table = (books, removeBook) => {
 
     return (
         <div className="table">
