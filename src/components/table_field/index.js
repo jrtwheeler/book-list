@@ -1,13 +1,13 @@
 import React from "react";
 
-const TableField = ({ fieldName, settingsField }) => {
+const TableField = ({ fieldName, settingsField, removeBook }) => {
   return (
     <div className="tableField">
       {fieldName}
       {settingsField && (
         <>
           <i className="fas fa-edit"></i>
-          <i className="fas fa-trash"></i>
+          <i onClick={removeBook} className="fas fa-trash"></i>
         </>
       )}
     </div>

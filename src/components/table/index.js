@@ -16,7 +16,9 @@ const Table = (books, removeBook) => {
                     <TableField fieldName={book.bookTitle}/>
                     <TableField fieldName={book.bookAuthor}/>
                     <TableField fieldName={book.book.Isbn}/>
-                    <TableField settingsField/>
+                    <TableField 
+                    settingsField
+                    removeBook={() => removeBook(book.bookID)}/>
                 </div>
             ))}
         </div>
