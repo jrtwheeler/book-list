@@ -34,6 +34,10 @@ function App() {
     ]);
   };
 
+  const removeBook = () => {
+
+  }
+
   const clearInputs = () => {
     setTitle("");
     setAuthor("");
@@ -60,7 +64,7 @@ function App() {
           currentBookId={setCurrentBookId}
           handleSubmit={handleSubmit}
         />
-        <Table />
+        <Table books={books} removeBook={removeBook}/>
       </div>
     </div>
   );
