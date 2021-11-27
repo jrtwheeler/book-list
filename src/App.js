@@ -38,6 +38,10 @@ function App() {
     setBooks(books.filter((book) => book.bookId !== id))
   }
 
+  const editBook = () => {
+
+  }
+
   const clearInputs = () => {
     setTitle("");
     setAuthor("");
@@ -64,7 +68,7 @@ function App() {
           currentBookId={setCurrentBookId}
           handleSubmit={handleSubmit}
         />
-        <Table books={books} removeBook={removeBook}/>
+        <Table books={books} removeBook={removeBook} editBook={editBook}/>
       </div>
     </div>
   );
