@@ -1,7 +1,16 @@
 import React from "react";
 
 const Form = (props) => {
-  const { title, setTitle, author, setAuthor, isbn, setIsbn, currentBookId } = props;
+  const {
+    title,
+    setTitle,
+    author,
+    setAuthor,
+    isbn,
+    setIsbn,
+    currentBookId,
+    cancelEdit,
+  } = props;
 
   return (
     <form>
@@ -23,13 +32,14 @@ const Form = (props) => {
       <label>ISBN#</label>
       <input
         type="text"
-        requiredvalue={isbn}
+        required
+        value={isbn}
         onChange={(e) => setIsbn(e.target.value)}
       />
       <button tabIndex="0" type="submit">
         {currentBookId !== null ? "Update" : "Add"}
       </button>
-      {currentBookId !== null && <button>Cancel</button>}
+      {currentBookId !== null && <button onClick={cancelEdit}>Cancel</button>}
     </form>
   );
 };
