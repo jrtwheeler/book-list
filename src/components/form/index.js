@@ -29,6 +29,7 @@ const Form = (props) => {
       <button tabIndex="0" type="submit">
         {currentBookId !== null ? "Update" : "Add"}
       </button>
+      {currentBookId !== null && <button>Cancel</button>}
     </form>
   );
 };

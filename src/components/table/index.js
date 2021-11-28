@@ -2,7 +2,7 @@ import React from "react";
 import TableField from "../table_field";
 
 const Table = (books, removeBook, editBook) => {
-
+console.log(books);
     return (
         <div className="table">
             <div className="tableHeading">

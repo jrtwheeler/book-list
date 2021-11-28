@@ -15,7 +15,7 @@ function App() {
       bookAuthor: author,
       bookIsbn: isbn,
       bookId: uuidv4(),
-    },
+    }
   ]);
 
   const isInputInvalid = () => {
@@ -38,24 +38,28 @@ function App() {
     setBooks(books.filter((book) => book.bookId !== id))
   }
 
-  const editBook = () => {
+  const editBook = (book) => {
     setTitle(book.bookTitle);
     setAuthor(book.bookAuthor);
     setIsbn(book.bookIsbn);
     setCurrentBookId(book.bookId);
-  }
+  };
+
+  const updateBook = (books) => {
+    setBooks(books.map((book) => book.bookId === currentBookId ? {...books, bookTitle: title, bookAuthor: author, bookIsbn: isbn } : book))
+  };
 
   const clearInputs = () => {
     setTitle("");
     setAuthor("");
     setIsbn("");
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     clearInputs();
     if(isInputInvalid()) return;
-    addBook();
+    !currentBookId ? addBook() : updateBook();
   };
 
   return (
